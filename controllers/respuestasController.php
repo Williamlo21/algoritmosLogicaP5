@@ -14,13 +14,13 @@ class RespuestasController{
         $resBlanco = isset($_POST['resBlanco']) ? $_POST['resBlanco'] : false;
 
         if ($nombre && $resCorrectas && $resIncorrectas && $resBlanco) {
-            $Respuesta = new Respuestas();
-            $Respuesta->setNombre($nombre);
-            $Respuesta->setResCorrectas($resCorrectas);
-            $Respuesta->setResIncorrectas($resIncorrectas);
-            $Respuesta->setResBlanco($resBlanco);
-            // $Respuesta->promedio();
+            $respuesta = new Respuestas();
+            $respuesta->setNombre($nombre);
+            $respuesta->setResCorrectas($resCorrectas);
+            $respuesta->setResIncorrectas($resIncorrectas);
+            $respuesta->setResBlanco($resBlanco);
+            $respuesta->darResultado();
         }
-        require_once "views/estudiantes/promedio.php";
+        require_once "views/respuestas/muestraResultados.php";
     }
 }

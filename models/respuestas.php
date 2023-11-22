@@ -50,5 +50,12 @@ class Respuestas{
 
         return $this;
     }
+    public function darResultado(){
+        $correctas = $this->resCorrectas;
+        $incorrectas = $this->resIncorrectas;
+        $blanco = $this->resBlanco;
+        $res = ($correctas * 4)+ ($incorrectas * (-1))+($blanco*0);
+        return $res;
+    }
     
 }
