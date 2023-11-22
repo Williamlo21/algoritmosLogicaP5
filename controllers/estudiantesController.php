@@ -1,9 +1,7 @@
 <?php
 require_once"models/estudiantes.php";
 class EstudiantesController{
-    public function index(){
-        require_once"views/estudiantes/index.php";
-    }
+    
     public function registrar(){
         require_once"views/estudiantes/notas.php";
     }
