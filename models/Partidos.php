@@ -1,6 +1,6 @@
 <?php
 
-class Respuestas
+class Partidos
 {
     public $equipo;
     public $ganados;
